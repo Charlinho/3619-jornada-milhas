@@ -12,6 +12,9 @@ import { MaterialModule } from './core/material/material.module';
 import { HomeModule } from './home/home.module';
 import { ErroModule } from './core/erro/erro.module';
 import { ErrosInterceptor } from './core/erro/erros.interceptor';
+import { AutenticacaoModule } from './autenticacao/autenticacao.module';
+import { BuscaModule } from './busca/busca.module';
+import { DetalheModule } from './detalhe/detalhe.module';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,10 @@ import { ErrosInterceptor } from './core/erro/erros.interceptor';
     BrowserAnimationsModule,
     HttpClientModule,
     ReactiveFormsModule,
-    ErroModule
+    ErroModule,
+    AutenticacaoModule,
+    BuscaModule,
+    DetalheModule
   ],
   providers: [
     {
