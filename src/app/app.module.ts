@@ -15,6 +15,7 @@ import { ErrosInterceptor } from './core/erro/erros.interceptor';
 import { AutenticacaoModule } from './autenticacao/autenticacao.module';
 import { BuscaModule } from './busca/busca.module';
 import { DetalheModule } from './detalhe/detalhe.module';
+import { ReservaModule } from './reserva/reserva.module';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { DetalheModule } from './detalhe/detalhe.module';
     ErroModule,
     AutenticacaoModule,
     BuscaModule,
-    DetalheModule
+    DetalheModule,
+    ReservaModule
   ],
   providers: [
     {
