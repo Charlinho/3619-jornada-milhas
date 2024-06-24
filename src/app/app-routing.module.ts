@@ -20,11 +20,6 @@ const routes: Routes = [
     pathMatch: 'full'
   },
   {
-    path: '**',
-    redirectTo: '/pagina-nao-encontrada',
-    pathMatch: 'full'
-  },
-  {
     path: 'busca',
     component: BuscaComponent
   },
@@ -35,7 +30,12 @@ const routes: Routes = [
   {
     path: 'reserva',
     component: ReservaComponent
-  }
+  },
+  {
+    path: '**',
+    redirectTo: '/pagina-nao-encontrada',
+    pathMatch: 'full'
+  },
 ];
 
 @NgModule({
