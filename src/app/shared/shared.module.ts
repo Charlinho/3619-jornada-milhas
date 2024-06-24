@@ -17,6 +17,7 @@ import { ModalComponent } from "./modal/modal.component";
 import { SeletorPassageiroComponent } from "./seletor-passageiro/seletor-passageiro.component";
 import { MaterialModule } from "../core/material/material.module";
 import { RouterModule } from "@angular/router";
+import { BackButtonDirective } from './back-button/back-button.directive';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,8 @@ import { RouterModule } from "@angular/router";
     SeletorPassageiroComponent,
     ModalComponent,
     RadioButtonGroupComponent,
-    BotaoControleComponent
+    BotaoControleComponent,
+    BackButtonDirective
   ],
   imports: [
     CommonModule,
@@ -55,7 +57,8 @@ import { RouterModule } from "@angular/router";
     SeletorPassageiroComponent,
     ModalComponent,
     BotaoControleComponent,
-    RadioButtonGroupComponent
+    RadioButtonGroupComponent,
+    BackButtonDirective
   ]
 })
 export class SharedModule { }
