@@ -92,7 +92,7 @@
             <div class="separator"></div>
             <p class="final-cost-title">Valor final</p>
             <p class="final-cost">R$ 3769</p>
-            <button class="payment-button" [disabled]="form.invalid">Avançar para o pagamento</button>
+            <button class="payment-button" [disabled]="form.invalid" (click)="onPagamentoClick()">Avançar para o pagamento</button>
           </div>
         </aside>
       </main>

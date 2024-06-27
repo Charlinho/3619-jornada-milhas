@@ -1,7 +1,10 @@
 .radio-button-group {
   display: flex;
-  flex-direction: column;
   gap: 10px;
+
+  div:first-child label {
+    margin-top: 8px;
+  }
 
   label {
     display: flex;
