@@ -1,3 +1,4 @@
+import { PagamentoService } from './pagamento.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RadioOption } from '../core/types/type';
@@ -8,6 +9,12 @@ import { RadioOption } from '../core/types/type';
   styleUrls: ['./pagamento.component.scss']
 })
 export class PagamentoComponent implements OnInit {
+
+  qrCode$ = this.pagamentoService.getQrCode();
+
+  constructor(
+    private pagamentoService: PagamentoService
+  ) {}
 
   pagamentoRadioOptions: RadioOption[] = [
     {

@@ -30,12 +30,14 @@
           Para fazer o pagamento do pedido escaneie o QRCode ou copie o código Pix em seu aplicativo de pagamento.
         </p>
         <div class="pix-content">
-          <img src="../../assets/imagens/qr-code.png" alt="Pix QR Code" class="pix-qr-code" />
-          <div class="pix-code-section">
-            <p class="pix-code-label">Código Pix:</p>
-            <p class="pix-code">A743920285NFUDSOAMCNAF9HCH02854859AJOA10</p>
-            <button class="copy-button">Copiar</button>
-          </div>
+          <ng-container *ngIf="qrCode$ | async as qrCode">
+            <img [src]="qrCode.imagem" alt="Pix QR Code" class="pix-qr-code" />
+            <div class="pix-code-section">
+              <p class="pix-code-label">Código Pix:</p>
+              <p class="pix-code">{{ qrCode.codigo }}</p>
+              <button class="copy-button">Copiar</button>
+            </div>
+          </ng-container>
         </div>
       </section>
 
