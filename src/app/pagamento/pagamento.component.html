@@ -46,7 +46,7 @@
           <span class="material-icon">credit_card</span>
           <h1 class="form-title">Cartão de crédito</h1>
         </header>
-        <form [formGroup]="form">
+        <form [formGroup]="form" (ngSubmit)="onSubmitForm()">
           <div class="form-row">
             <mat-form-field appearance="outline" class="full-width">
               <mat-label>Número do cartão</mat-label>

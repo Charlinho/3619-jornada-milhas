@@ -17,10 +17,12 @@ import { BuscaModule } from './busca/busca.module';
 import { DetalheModule } from './detalhe/detalhe.module';
 import { ReservaModule } from './reserva/reserva.module';
 import { PagamentoModule } from './pagamento/pagamento.module';
+import { ConclusaoReservaComponent } from './conclusao-reserva/conclusao-reserva.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ConclusaoReservaComponent
   ],
   imports: [
     BrowserModule,

@@ -2,6 +2,7 @@ import { PagamentoService } from './pagamento.service';
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { RadioOption } from '../core/types/type';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-pagamento',
@@ -13,6 +14,7 @@ export class PagamentoComponent implements OnInit {
   qrCode$ = this.pagamentoService.getQrCode();
 
   constructor(
+    private router: Router,
     private pagamentoService: PagamentoService
   ) {}
 
@@ -53,5 +55,12 @@ export class PagamentoComponent implements OnInit {
 
   onSelectionChange(option: RadioOption): void {
     this.formaPagamento = option;
+  }
+
+  onSubmitForm(): void {
+    this.pagamentoService.criarReserva()
+      .subscribe(() => {
+        this.router.navigate(['conclusao-reserva']);
+      });
   }
 }

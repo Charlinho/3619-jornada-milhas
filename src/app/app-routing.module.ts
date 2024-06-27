@@ -5,6 +5,7 @@ import { BuscaComponent } from './busca/busca.component';
 import { DetalheComponent } from './detalhe/detalhe.component';
 import { ReservaComponent } from './reserva/reserva.component';
 import { PagamentoComponent } from './pagamento/pagamento.component';
+import { ConclusaoReservaComponent } from './conclusao-reserva/conclusao-reserva.component';
 
 const routes: Routes = [
   {
@@ -35,6 +36,10 @@ const routes: Routes = [
   {
     path: 'pagamento',
     component: PagamentoComponent
+  },
+  {
+    path: 'conclusao-reserva',
+    component: ConclusaoReservaComponent
   },
   {
     path: '**',
