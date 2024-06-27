@@ -103,3 +103,13 @@ export interface RadioOption {
   label: string,
   img?: { src: string, alt: string}
 }
+
+export interface Reserva {
+  destino: string;
+  dataIda: string;
+  dataVolta: string;
+  origem: string;
+  estadoOrigem: string;
+  adultos: number;
+  valorTotal: number;
+}
