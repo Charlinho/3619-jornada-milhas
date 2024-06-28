@@ -25,7 +25,7 @@ export class PagamentoService {
       origem: "Rio Branco",
       estadoOrigem: "Acre",
       adultos: 3,
-      valorTotal: 3769
+      valorFinal: 3769
     };
 
     return this.httpClient.post(`${this.apiUrl}/reserva`, reserva);

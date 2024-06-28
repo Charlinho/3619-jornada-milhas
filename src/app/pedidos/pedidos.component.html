@@ -13,27 +13,27 @@
       </nav>
     </header>
     <section class="order-container">
-      <article class="order-card">
+      <article *ngFor="let pedido of pedidos$ | async" class="order-card">
         <img src="../../assets/imagens/desert.png" alt="Desert in Chile" class="order-image" />
         <div class="order-details">
           <div class="order-info">
             <h2 class="order-title">Atravesse o deserto no Chile</h2>
             <p class="order-dates">
-              <strong>Data de ida:</strong> 23/09/2025 <br />
-              <strong>Data de volta:</strong> 30/09/2025 <br />
-              <strong>Origem:</strong> Rio Branco <br />
-              <strong>Estado de origem:</strong> Acre
+              <strong>Data de ida:</strong> {{ pedido.dataIda }} <br />
+              <strong>Data de volta:</strong> {{ pedido.dataVolta }}<br />
+              <strong>Origem:</strong> {{ pedido.origem }} <br />
+              <strong>Estado de origem:</strong> {{ pedido.origem }}
             </p>
-            <p class="order-guests">3 adultos</p>
+            <p class="order-guests">{{ pedido.adultos }} adultos</p>
           </div>
           <div class="order-price">
             <h3 class="price-label">Valor final</h3>
-            <p class="price-value">R$ 3769</p>
+            <p class="price-value">R$ {{ pedido.valorFinal }}</p>
           </div>
         </div>
         <div class="order-actions">
           <button routerLink="/reserva" class="btn btn-outline">Editar reserva</button>
-          <button class="btn btn-secondary" (click)="onCancelarPedido()">Cancelar reserva</button>
+          <button class="btn btn-secondary" (click)="onCancelarPedido(pedido?.id)">Cancelar reserva</button>
         </div>
       </article>
     </section>

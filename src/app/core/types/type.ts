@@ -105,11 +105,12 @@ export interface RadioOption {
 }
 
 export interface Reserva {
+  id?: number;
   destino: string;
   dataIda: string;
   dataVolta: string;
   origem: string;
   estadoOrigem: string;
   adultos: number;
-  valorTotal: number;
+  valorFinal: number;
 }

@@ -4,6 +4,8 @@ import { CommonModule } from '@angular/common';
 import { PedidosComponent } from './pedidos.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ModalCancelarPedidoComponent } from './modal-cancelar-pedido/modal-cancelar-pedido.component';
+import { PedidosService } from './pedidos.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -11,9 +13,13 @@ import { ModalCancelarPedidoComponent } from './modal-cancelar-pedido/modal-canc
     ModalCancelarPedidoComponent
   ],
   imports: [
+    FormsModule,
     CommonModule,
     SharedModule,
     HttpClientModule
+  ],
+  providers: [
+    PedidosService
   ]
 })
 export class PedidosModule { }
