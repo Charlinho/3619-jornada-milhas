@@ -7,6 +7,7 @@
       <mat-icon>menu</mat-icon>
     </button>
     <div class="links-toolbar" *ngIf="showMenu || !isMobile">
+      <button mat-button routerLink="/pedidos">Meus Pedidos</button>
       <button mat-button routerLink="/vender-milhas">Vender milhas</button>
       <button mat-button routerLink="/sobre">Sobre</button>
       <ng-container *ngIf="user$ | async as pessoaUsuaria; else login">

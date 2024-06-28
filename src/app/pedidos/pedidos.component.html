@@ -1,0 +1,41 @@
+<app-banner
+  src="assets/imagens/banner-conclusão.png"
+  alt="Banner pedidos">
+</app-banner>
+
+<app-container>
+  <div class="order-history">
+    <header class="header">
+      <h1 class="title">Meus pedidos</h1>
+      <nav class="nav-link">
+        <img src="../../assets/icones/back-icon.svg" alt="Home icon" class="icon" />
+        <a href="/" class="link-text">Voltar para home</a>
+      </nav>
+    </header>
+    <section class="order-container">
+      <article class="order-card">
+        <img src="../../assets/imagens/desert.png" alt="Desert in Chile" class="order-image" />
+        <div class="order-details">
+          <div class="order-info">
+            <h2 class="order-title">Atravesse o deserto no Chile</h2>
+            <p class="order-dates">
+              <strong>Data de ida:</strong> 23/09/2025 <br />
+              <strong>Data de volta:</strong> 30/09/2025 <br />
+              <strong>Origem:</strong> Rio Branco <br />
+              <strong>Estado de origem:</strong> Acre
+            </p>
+            <p class="order-guests">3 adultos</p>
+          </div>
+          <div class="order-price">
+            <h3 class="price-label">Valor final</h3>
+            <p class="price-value">R$ 3769</p>
+          </div>
+        </div>
+        <div class="order-actions">
+          <button routerLink="/reserva" class="btn btn-outline">Editar reserva</button>
+          <button class="btn btn-secondary" (click)="onCancelarPedido()">Cancelar reserva</button>
+        </div>
+      </article>
+    </section>
+  </div>
+</app-container>

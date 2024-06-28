@@ -17,12 +17,12 @@ import { BuscaModule } from './busca/busca.module';
 import { DetalheModule } from './detalhe/detalhe.module';
 import { ReservaModule } from './reserva/reserva.module';
 import { PagamentoModule } from './pagamento/pagamento.module';
-import { ConclusaoReservaComponent } from './conclusao-reserva/conclusao-reserva.component';
+import { PedidosModule } from './pedidos/pedidos.module';
+import { ConclusaoReservaModule } from './conclusao-reserva/conclusao-reserva.module';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    ConclusaoReservaComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +38,9 @@ import { ConclusaoReservaComponent } from './conclusao-reserva/conclusao-reserva
     BuscaModule,
     DetalheModule,
     ReservaModule,
-    PagamentoModule
+    PagamentoModule,
+    PedidosModule,
+    ConclusaoReservaModule
   ],
   providers: [
     {
